@@ -6,3 +6,4 @@ This is a project management app that accomplishes the following:
  - User can create and edit details of tasks (task details, due dates, progress)
  - User can mark completion progress of tasks
  - User can delete tasks
+ 
