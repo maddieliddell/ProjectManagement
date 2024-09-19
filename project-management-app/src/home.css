@@ -16,4 +16,13 @@ Body {
     right: 16px;
     top: 16px;
   }
+
+  button{
+    background-color:rgb(227, 227, 214);
+  }
+  
+  button:hover{background-color:rgb(110, 158, 113);}
+  
+  button:focus{background-color:rgb(25, 86, 37);}
+
   
