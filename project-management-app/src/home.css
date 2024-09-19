@@ -1,0 +1,19 @@
+Body {
+    font-family: Sans-serif;
+    font size: 14;
+    width: 100%;
+    background-color: #D3D3D3;
+  }
+  
+  h1 {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+  }
+  
+  menu {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+  }
+  
