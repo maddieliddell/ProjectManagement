@@ -24,7 +24,7 @@ export const taskManager = () => {
       </section>
       <hr />
       <section>
-        <h2>Taskss</h2>
+        <h2>Tasks</h2>
       </section>
     </div>
   );
