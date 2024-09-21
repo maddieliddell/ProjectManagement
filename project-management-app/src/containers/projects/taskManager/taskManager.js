@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import { newTaskForm } from "../../components/newTaskForm";
-import { TileList } from "../../components/TileList";
+import { newTaskForm } from "../../components/newTaskForm"; /* check pathway */
+import { TileList } from "../../components/TileList"; /* check pathway */
 
 export const taskManager = () => {
   /*
