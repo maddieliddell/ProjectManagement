@@ -55,44 +55,33 @@ function NewProjectForm() {
             <h1>New Project</h1>
             <fieldset>
                 <form action="#" method="get">
-                    <label for="projectname">
-                        Project Name*
-                    </label>
+                    <label htmlFor="projectname">Project Name*</label>
                     <input
                         type="text"
                         name="projectname"
                         id="projectname"
                         value={projectName}
-                        onChange={(e) =>
-                            setProjectName(e.target.value)
-                        }
+                        onChange={(e) => setProjectName(e.target.value)}
                         placeholder="Enter Project Name"
                         required
                     />
-                    <label for="email">Enter Email* </label>
+                    <label htmlFor="email">Enter Email*</label>
                     <input
                         type="email"
                         name="email"
                         id="email"
                         value={email}
-                        onChange={(e) =>
-                            setEmail(e.target.value)
-                        }
+                        onChange={(e) => setEmail(e.target.value)}
                         placeholder="Enter email"
                         required
                     />
-                    
-                    <label for="Project Status">
-                        Project Status
-                    </label>
+                    <label htmlFor="Project Status">Project Status</label>
                     <input
                         type="checkbox"
                         name="project status"
                         id="To Do"
                         checked={status.toDo === true}
-                        onChange={(e) =>
-                            handleStatusChange("To Do")
-                        }
+                        onChange={() => handleStatusChange("To Do")}
                     />
                     To Do
                     <input
@@ -100,9 +89,7 @@ function NewProjectForm() {
                         name="Project Status"
                         id="In Progress"
                         checked={status.inProgress === true}
-                        onChange={(e) =>
-                            handleStatusChange("In Progress")
-                        }
+                        onChange={() => handleStatusChange("In Progress")}
                     />
                     In Progress
                     <input
@@ -110,30 +97,24 @@ function NewProjectForm() {
                         name="Project Status"
                         id="Done"
                         checked={status.done === true}
-                        onChange={(e) =>
-                            handleStatusChange("Done")
-                        }
+                        onChange={() => handleStatusChange("Done")}
                     />
                     Done
-                    <label for="file">Upload Image*</label>
+                    <label htmlFor="file">Upload Image*</label>
                     <input
                         type="file"
                         name="file"
                         id="file"
-                        onChange={(e) =>
-                            setImage(e.target.files[0])
-                        }
+                        onChange={(e) => setImage(e.target.files[0])}
                         placeholder="Enter Upload File"
                         required
                     />
-                    <label for="url">Enter URL</label>
+                    <label htmlFor="url">Enter URL</label>
                     <input
                         type="url"
                         name="url"
                         id="url"
-                        onChange={(e) =>
-                            setUrl(e.target.value)
-                        }
+                        onChange={(e) => setUrl(e.target.value)}
                         placeholder="Enter url"
                         required
                     />
@@ -142,66 +123,7 @@ function NewProjectForm() {
                         name="select"
                         id="select"
                         value={selectedOption}
-                        onChange={(e) =>
-                            setSelectedOption(
-                                e.target.value
-                            )
-                        }
-            >
-                        <option
-                            value=""
-                            disabled
-                            selected={selectedOption === ""}
-                        ></option>
-                    <label for= "Assignee"> </label>
-                    <select
-                        name="select"
-                        id="select"
-                        value={selectedOption}
-                        onChange={(e) =>
-                            setSelectedOption(
-                                e.target.value
-                            )
-                        }
-                    >
-                        <option
-                            value=""
-                            disabled
-                            selected={selectedOption === ""}
-                        >
-                            Select Assignee
-                        </option>
+                       
+    
 
-                    <label for="about">Comments</label>
-                    <textarea
-                        name="about"
-                        id="about"
-                        cols="30"
-                        rows="10"
-                        onChange={(e) =>
-                            setComments(e.target.value)
-                        }
-                        placeholder="additional project comments..."
-                        required
-                    ></textarea>
-                    <button
-                        type="reset"
-                        value="reset"
-                        onClick={() => handleReset()}
-                    >
-                        Reset
-                    </button>
-                    <button
-                        type="submit"
-                        value="Submit"
-                        onClick={(e) => handleSubmit(e)}
-                    >
-                        Submit
-                    </button>
-                </form>
-            </fieldset>
-        </div>
-    );
-}
-
-export default newProjectForm;
+export default NewProjectForm;
