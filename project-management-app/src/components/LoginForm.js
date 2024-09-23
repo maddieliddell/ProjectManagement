@@ -1,7 +1,9 @@
-import { useDispatch, useSelector, setCurrentUser, selectCurrentUser } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import { FormGroup, Button, Label } from 'react-bootstrap';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
+// Import the Redux selectors and actions from your slice
+import { setCurrentUser, selectCurrentUser, selectIsLoggedIn } from '../user/userSlice';
 //import { toHaveFormValues } from '@testing-library/jest-dom/matchers';
 
 const LoginForm = () => {
@@ -20,6 +22,18 @@ const LoginForm = () => {
     };
     dispatch(setCurrentUser(newUser)); // Dispatch the login action
   };
+
+  const validateUserLoginForm = (values) => {
+    const errors = {};
+    if (!values.username) {
+      errors.username = 'Required';
+    }
+    if (!values.password) {
+      errors.password = 'Required';
+    }
+    return errors;
+  };
+
   return (
     <Formik
         initialValues={{ username: '', password: '',}}
@@ -57,6 +71,7 @@ const LoginForm = () => {
       </Form>
         )}
     </Formik>
-    )}; 
+ );
+}; 
 
 export default LoginForm;
