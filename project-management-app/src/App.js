@@ -8,31 +8,29 @@ import store from './app/store';
 import App from './App';
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <Provider store={store} />,
   document.getElementById('root')
 );
 
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Text here to edit 
-        </p>
-        <a
-          className="App-link"
-          href="https:// " /* make new link */
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        </a>
-      </header>
-    </div>
-  );
-}
+// function App() {
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <p>
+//           Text here to edit 
+//         </p>
+//         <a
+//           className="App-link"
+//           href="https:// " /* make new link */
+//           target="_blank"
+//           rel="noopener noreferrer"
+//         >
+//         </a>
+//       </header>
+//     </div>
+//   );
+// }
 
 export default App;
 
