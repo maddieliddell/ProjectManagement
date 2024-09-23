@@ -25,8 +25,6 @@ const LoginForm = () => {
         validate={validateUserLoginForm}
     >
         {({ isSubmitting}) => (
-
-        )};
       <Form>
         <FormGroup>
           <Label htmlFor="username">Username</Label>
@@ -55,9 +53,8 @@ const LoginForm = () => {
         </FormGroup>
         <Button type="submit" color='primary'>Login</Button>
       </Form>
+        )}
     </Formik>
-  );
-
-};
+    )}; 
 
 export default LoginForm;
