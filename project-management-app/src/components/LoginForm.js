@@ -1,6 +1,7 @@
+import { useDispatch, useSelector, setCurrentUser, selectCurrentUser } from 'react-redux';
 import { useState } from 'react';
 import { FormGroup, Button, Label } from 'react-bootstrap';
-import { Formik, Field, Form, Error, ErrorMessage } from 'formik';
+import { Formik, Field, Form, ErrorMessage } from 'formik';
 //import { toHaveFormValues } from '@testing-library/jest-dom/matchers';
 
 const LoginForm = () => {
@@ -8,6 +9,7 @@ const LoginForm = () => {
   const [password, setPassword] = useState('');
 
   const currentUser = useSelector(selectCurrentUser);
+  const isLoggedIn = useSelector(selectIsLoggedIn);
   const dispatch = useDispatch();
 
   const handleLogin = (values) => {
@@ -16,8 +18,8 @@ const LoginForm = () => {
         username: values.username,
         password: values.password
     };
-    dispatch(setCurrentUser(newUser));
-  }
+    dispatch(setCurrentUser(newUser)); // Dispatch the login action
+  };
   return (
     <Formik
         initialValues={{ username: '', password: '',}}

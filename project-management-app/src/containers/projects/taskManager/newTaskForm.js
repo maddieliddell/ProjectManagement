@@ -134,7 +134,7 @@ function NewTaskForm() {
                                 e.target.value
                             )
                         }
-            >
+                     >
                         <option
                             value=""
                             disabled
@@ -189,6 +189,6 @@ function NewTaskForm() {
             </fieldset>
         </div>
     );
-}
+};
 
 export default newTaskForm;
