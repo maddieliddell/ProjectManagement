@@ -121,7 +121,7 @@ function NewProjectForm() {
                         name="file"
                         id="file"
                         onChange={(e) =>
-                            setimage(e.target.files[0])
+                            setImage(e.target.files[0])
                         }
                         placeholder="Enter Upload File"
                         required
