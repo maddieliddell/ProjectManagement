@@ -1,9 +1,8 @@
-import "./newProjectForm.module.css";
+import "./newTaskForm.module.css";
 import { React, useState } from "react";
 
-function NewProjectForm() {
-    const [projectName, setProjectName] = useState("");
-    const [email, setEmail] = useState("");
+function NewTaskForm() {
+    const [taskName, setTaskName] = useState("");
     const [status, setStatus] = useState({
         toDo: true,
         inProgress: false,
@@ -18,15 +17,14 @@ function NewProjectForm() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(
-            projectName,
-            email,
+            taskName,
             selectedOption,
             status,
             image,
             url,
             comments
         );
-        // Add your form submission logic here
+        // Add form submission logic here
     };
 
     const handleAssigneeChange = (assign) => {
@@ -51,43 +49,32 @@ function NewProjectForm() {
     };
 
     return (
-        <div className="NewProjectForm">
-            <h1>New Project</h1>
+        <div className="NewTaskForm">
+            <h1>New Task</h1>
             <fieldset>
                 <form action="#" method="get">
-                    <label for="projectname">
-                        Project Name*
+                    <label for="taskname">
+                        Task Name*
                     </label>
                     <input
                         type="text"
-                        name="projectname"
-                        id="projectname"
-                        value={projectName}
+                        name="taskname"
+                        id="taskname"
+                        value={taskName}
                         onChange={(e) =>
-                            setProjectName(e.target.value)
+                            setTaskName(e.target.value)
                         }
-                        placeholder="Enter Project Name"
-                        required
-                    />
-                    <label for="email">Enter Email* </label>
-                    <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        value={email}
-                        onChange={(e) =>
-                            setEmail(e.target.value)
-                        }
-                        placeholder="Enter email"
+                        placeholder="Enter Task Name"
                         required
                     />
                     
-                    <label for="Project Status">
-                        Project Status
+                    
+                    <label for="Task Status">
+                        Task Status
                     </label>
                     <input
                         type="checkbox"
-                        name="project status"
+                        name="Task Status"
                         id="To Do"
                         checked={status.toDo === true}
                         onChange={(e) =>
@@ -97,7 +84,7 @@ function NewProjectForm() {
                     To Do
                     <input
                         type="checkbox"
-                        name="Project Status"
+                        name="Task Status"
                         id="In Progress"
                         checked={status.inProgress === true}
                         onChange={(e) =>
@@ -107,7 +94,7 @@ function NewProjectForm() {
                     In Progress
                     <input
                         type="checkbox"
-                        name="Project Status"
+                        name="Task Status"
                         id="Done"
                         checked={status.done === true}
                         onChange={(e) =>
@@ -181,7 +168,7 @@ function NewProjectForm() {
                         onChange={(e) =>
                             setComments(e.target.value)
                         }
-                        placeholder="additional project comments..."
+                        placeholder="additional task comments..."
                         required
                     ></textarea>
                     <button
@@ -204,4 +191,4 @@ function NewProjectForm() {
     );
 }
 
-export default newProjectForm;
+export default newTaskForm;

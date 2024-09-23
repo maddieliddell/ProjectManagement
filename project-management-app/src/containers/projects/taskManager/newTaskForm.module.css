@@ -3,7 +3,7 @@ body {
     text-align: center;
     font-family: "Lucida Console", "Courier New", monospace;
 }
-.NewProjectForm {
+.NewTaskForm {
     background-color: #F3EAEA;
     border-radius: 15px;
     box-shadow: #723d46;
@@ -77,4 +77,5 @@ textarea {
     width: 88%;
     min-height: 100px;
     max-height: 150px;
+    background-color: #f7f6f4;
 }
