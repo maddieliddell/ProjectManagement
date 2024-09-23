@@ -1,10 +1,11 @@
-import './App.css';
+import LoginPage from './pages/LoginPage';
+//import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={} className=" " alt=" " />
+        <LoginPage />
         <p>
           Text here to edit 
         </p>
